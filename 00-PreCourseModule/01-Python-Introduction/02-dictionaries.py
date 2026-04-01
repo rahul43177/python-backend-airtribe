@@ -1,52 +1,71 @@
-# # user = {
-# #     "name" : "Rahul Mishra" , 
-# #     "age" : 25  , 
-# #     "address" : "Bangalore"
+# # # user = {
+# # #     "name" : "Rahul Mishra" , 
+# # #     "age" : 25  , 
+# # #     "address" : "Bangalore"
+# # # }
+
+# # # name = user["name"]
+
+# # # print(type(name))
+
+# # # age = user.get("age" , "Not Found")
+# # # print(type(age))
+# # # print(age)
+
+
+# # data = {
+# #     "a" : 1 , 
+# #     "b" : 2 
 # # }
 
-# # name = user["name"]
+# # data["c"] = data.get("c" , 0) + 1 # 0 + 1 = 1 
+# # print(data) 
 
-# # print(type(name))
+# # """
+# # data = {
+# #     "a" : 1 , 
+# #     "b" : 2 , 
+# #     "c" : 1 
+# # }
 
-# # age = user.get("age" , "Not Found")
-# # print(type(age))
-# # print(age)
+# # """
 
+# # Itarating over the dictionary : 
 
-# data = {
-#     "a" : 1 , 
-#     "b" : 2 
+# person = {
+#     "name" : "Rahul Mishra" , 
+#     "age" : 25 , 
+#     "gender" : "Male", 
+#     "address" : "Bangalore"
 # }
 
-# data["c"] = data.get("c" , 0) + 1 # 0 + 1 = 1 
-# print(data) 
+# for key in person : 
+#     print(f"Key : {key}")
+# print("\n")
+# for val in person.values() :
+#     print(f"value : {val}")
 
-# """
-# data = {
-#     "a" : 1 , 
-#     "b" : 2 , 
-#     "c" : 1 
-# }
+# print("\n")
 
-# """
+# #printing both 
+# for key , val in person.items() : 
+#     print(f"{key} : {val}")
 
-# Itarating over the dictionary : 
-
-person = {
-    "name" : "Rahul Mishra" , 
-    "age" : 25 , 
-    "gender" : "Male", 
-    "address" : "Bangalore"
+#Nested dictionary 
+users = {
+    "alice": {
+        "email": "alice@example.com",
+        "age": 30
+    },
+    "bob": {
+        "email": "bob@example.com",
+        "age": 25
+    }
 }
 
-for key in person : 
-    print(f"Key : {key}")
-print("\n")
-for val in person.values() :
-    print(f"value : {val}")
+age = users["alice"]["age"]
+print(age)
 
-print("\n")
-
-#printing both 
-for key , val in person.items() : 
-    print(f"{key} : {val}")
+alice = users.get("alice" , {})
+alice_age = alice.get("age" , {})
+print(alice_age)
